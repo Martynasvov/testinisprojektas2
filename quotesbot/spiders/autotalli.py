@@ -19,7 +19,7 @@ class AutotalliSpider(scrapy.Spider):
 
     def parse_skelbimas(self, response):
         kaina = response.css("div.carPrice span::text").extract_first()
-        title = response.css('h1.carTitle::text').extract_first()
+        title = response.css('h1.carTitlee::text').extract_first()
 
         kilometrazas = {}
         for carDetailsLine in response.css('div.carDetailsGroup div.carDetailsLine'):
